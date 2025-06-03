@@ -77,14 +77,16 @@ Yellow "Warning: disk space low\n"
 
 ## Notes
 
-- If `format` is missing or a number (`"1"`), the script will print an error and exit.
+- If `format` is missing or a number (`"1"`), the script will print an error and return
+`1`.
 - All formatting automatically resets after each call.
 
 ## Credits
 
-Inspired by [fatih](https://github.com/fatih) and his approach in the Golang
+- [@ta7erallaa](https://www.github.com/ta7erallaa).
+- Inspired by [fatih](https://github.com/fatih) and his approach in the Golang
 [color](https://github.com/fatih/color) package.
 
 ## License
 
-![License](https://img.shields.io/github/license/ta7erallaa/color) MIT © Ta7erallaa
+![License](https://img.shields.io/badge/License-MIT-green/github/license/ta7erallaa/color)
