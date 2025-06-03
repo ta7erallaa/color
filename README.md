@@ -7,7 +7,7 @@ to terminal output.
 
 - Named color functions for clear, readable terminal output
 - Supports text attributes: bold, italic, underline, blink, etc.
-- Clean inline usage: `echo "$(Red \"text\")"` or for docs: `Red "Some description\n"`
+- Clean inline usage: `echo "$(Red "text")"` or for docs: `Red "Some description\n"`
 - Automatic color reset using Bash trap (like `defer`)
 
 ## Installation
@@ -81,9 +81,12 @@ Yellow "Warning: disk space low\n"
 `1`.
 - All formatting automatically resets after each call.
 
+## Author
+
+- [@ta7erallaa](https://www.github.com/ta7erallaa)
+
 ## Credits
 
-- [@ta7erallaa](https://www.github.com/ta7erallaa).
 - Inspired by [fatih](https://github.com/fatih) and his approach in the Golang
 [color](https://github.com/fatih/color) package.
 
