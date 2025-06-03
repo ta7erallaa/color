@@ -44,14 +44,15 @@ readonly fmt_arg_type_error="Format argument must be a string."
 check_format_validity() {
 	local format=$1
 
-	if [[ -z ""$format"" ]]; then
+	if [[ -z "$format" ]]; then
 		echo "$(Red "[ERROR]"): $fmt_arg_empty_error"
 		return 1
 
-	elif [[ """$format""" =~ ^[0-9]+$ ]]; then
+	elif [[ "$format" =~ ^[0-9]+$ ]]; then
 		echo "$(Red "[ERROR]"): $fmt_arg_type_error"
 		return 1
 	fi
+	return 0
 }
 
 #-------------------------------------------------------------------------------
@@ -87,6 +88,9 @@ color_wrapper() {
 	local base="$3"
 
 	check_format_validity "$format"
+	if [[ $? -eq 1 ]]; then
+		return
+	fi
 
 	if [[ -z $base ]]; then
 		set_color "$fg_color"
