@@ -89,7 +89,7 @@ color_wrapper() {
 
 	check_format_validity "$format"
 	if [[ $? -eq 1 ]]; then
-		return
+		return 1
 	fi
 
 	if [[ -z $base ]]; then
